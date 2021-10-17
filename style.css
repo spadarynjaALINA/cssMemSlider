@@ -1,0 +1,103 @@
+html {
+ width: 100vw;
+ height: 100vh;
+ font-size: 1.5rem;
+}
+
+body {
+ margin: 0;
+ width: 100vw;
+ height: 100vh;
+ overflow: hidden;
+}
+
+main {
+ display: grid;
+ grid-template-columns: 3fr 1fr;
+ grid-template-rows: 6fr 1fr;
+ row-gap: 2rem;
+ width:80vw;
+ height: 90vh;
+ margin: 2rem auto;
+}
+
+.slider-wrap {
+ display: flex;
+ grid-column-start: 1;
+ grid-column-end: 3;
+ grid-row-start: 1;
+ grid-row-end: 2;
+ overflow: hidden;
+}
+
+.description-wrap {
+  max-width: 100%;
+  min-height: 5rem;
+  overflow: hidden;
+}
+
+.slider-description {
+  display: flex;
+  min-width: 400%;
+  height: 100%;
+}
+
+
+.contrl {
+  justify-self: end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  opacity: 0;
+}
+
+
+.radio-label {
+  justify-self: end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radio-label span{
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: .1rem solid #000;
+  justify-self: end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-left: .4rem;
+  margin-top: .4rem;
+}
+
+
+.span1,
+#label1 {
+ margin-right: 45%;
+}
+
+.span2,
+#label2 {
+ margin-right: 30%;
+}
+
+.span3,
+#label3 {
+ margin-right: 15%;
+}
+
+.span4 {
+ margin-right: 0;
+}
+
