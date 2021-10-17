@@ -106,7 +106,7 @@ main {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  border: .1rem solid #000;
+  border: .1rem solid rgb(49, 46, 46);
   justify-self: end;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -118,6 +118,7 @@ main {
 
 
 .span1,
+#contr1,
 #label1 {
  margin-right: 45%;
 }
@@ -170,4 +171,38 @@ label:hover::before {
 
 .radio-label:active {
   transform: scale(.8);
+}
+
+#contr1:checked ~.radio-label> .span1, 
+#contr4:checked ~.radio-label> .span4,
+#contr3:checked ~.radio-label> .span3,
+#contr2:checked ~.radio-label> .span2 {
+ background-color: #444;
+}
+/*--------radio1---------*/
+
+#contr1:checked ~ .description-wrap >.slider-description {
+ transform: translateX(0);
+ transition: .5s;
+}
+
+/*----------radio2----*/
+
+#contr2:checked ~ .description-wrap >.slider-description  {
+ transform: translateX(-25%);
+  transition: .5s;
+}
+
+/*-------radio3--------*/
+
+#contr3:checked ~.description-wrap >.slider-description {
+ transform: translateX(-50%);
+  transition: .5s;
+}
+
+/*-------radio4-----------*/
+
+#contr4:checked ~ .description-wrap >.slider-description {
+ transform: translateX(-75%);
+  transition: .5s;
 }
