@@ -18,7 +18,9 @@ main {
  row-gap: 2rem;
  width:80vw;
  height: 90vh;
- margin: 2rem auto;
+ margin: 1rem auto;
+ padding-top: 1rem;
+ background-color: rgb(231, 217, 217);
 }
 
 .slider-wrap {
@@ -28,19 +30,20 @@ main {
  grid-row-start: 1;
  grid-row-end: 2;
  overflow: hidden;
- background-color: #fff;
+ background-color: rgb(231, 217, 217);
 }
 
 .description-wrap {
   max-width: 100%;
   min-height: 5rem;
   overflow: hidden;
+  
 }
 
 .slider-description {
   display: flex;
   min-width: 600%;
-  height: 100%;
+  height: 100%; 
 }
 
 
@@ -55,7 +58,8 @@ main {
 
 .slider-description p {
  width: 16.67%;
- background-color: #fff;
+ padding: 0 .2rem;
+ background-color: rgb(231, 217, 217);
 }
 
 .mem1 {
@@ -252,14 +256,14 @@ label:hover::before {
 /*----------radio2----*/
 
 #contr2:checked ~ .description-wrap >.slider-description  {
-  transform: translateX(-16.67%);
+  transform: translateX(-16.6%);
   transition: .5s;
 }
 
 /*-------radio3--------*/
 
 #contr3:checked ~.description-wrap >.slider-description {
-  transform: translateX(-33.33%);
+  transform: translateX(-33.3%);
   transition: .5s;
 }
 
@@ -272,13 +276,13 @@ label:hover::before {
 /*------radio5----*/
 
 #contr5:checked ~ .description-wrap >.slider-description {
-  transform: translateX(-66.67%);
+  transform: translateX(-66.6%);
   transition: .5s;
 }
 
 /*-----radio6---*/
 #contr6:checked ~ .description-wrap >.slider-description {
-  transform: translateX(-83.33%);
+  transform: translateX(-83.3%);
   transition: .5s;
 }
 
@@ -373,17 +377,33 @@ label:hover::before {
   grid-row-end: 3;
   opacity: 0;
 }
-
-#contr3 {
- margin-right: 50px;
+#contr6,
+#label6 {
+ margin-left: 5rem;
+ margin-right: 0;
 }
 
-#contr2 {
- margin-right: 100px;
+#contr5,#label5 {
+ margin-left: 3rem;
+ margin-right: 0;
 }
 
-#contr1 {
- margin-right: 150px;
+#contr4, #label4 {
+ margin-left: 1rem;
+ margin-right: 0;
+}
+
+#contr3, #label3 {
+ margin-right: 1rem;
+ margin-left: 0;
+}
+#contr2,#label2 {
+ margin-right: 3rem;
+ margin-left: 0;
+}
+
+#contr1, #label1 {
+ margin-right: 5rem;
 }
 
 .radio-label {
@@ -404,39 +424,25 @@ label:hover::before {
  width: .6em;
  height: .6em;
  border-radius: 50%;
- border: 3px solid #000;
+ border: .1rem solid #000;
   justify-self: center;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin-left: 8px;
-  margin-top: 8px;
+  margin-left: .3rem;
+  margin-top: .3rem;
 }
 
 .description-wrap {
   max-width: 100%;
 }
-
-.span1,
-#label1 {
- margin-right: 150px;
+label:hover::before {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: -1.5rem;
 }
 
-.span2,
-#label2 {
- margin-right: 50px;
-}
 
-.span3,
-#label3 {
- margin-left: 50px;
- margin-right: 0;
-}
-
-.span4,
-#label4 {
- margin-left: 150px;
- margin-right: 0;
-}
 }
