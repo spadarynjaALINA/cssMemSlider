@@ -52,6 +52,41 @@ main {
   opacity: 0;
 }
 
+.slider-description p {
+ width: 25%;
+ background-color: #fff;
+}
+
+.mem1 {
+   min-width: 100%;
+  height: auto;
+  transition: .5s;
+}
+
+.mem2 {
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: .5s;
+}
+
+.mem3 {
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-200%);
+  opacity: 0;
+  transition: .5s;
+}
+
+.mem4 {
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-300%);
+  opacity: 0;
+  transition: .5s;
+}
+
 
 .radio-label {
   justify-self: end;
@@ -101,3 +136,38 @@ main {
  margin-right: 0;
 }
 
+label:hover::before {
+    content: " ";
+    display: block;
+    border: 50%;
+    background: #444;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0.3;
+    backface-visibility: hidden;
+    margin-bottom: -2rem;
+}
+
+.page-up:after {
+    animation-delay: .5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.radio-label:active {
+  transform: scale(.8);
+}
